@@ -1,6 +1,6 @@
 import { Component, Input }                     from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Pageable }                             from '@ngxux/common';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { DataTablePage }                        from './DataTablePage';
 import { Page }                                 from './Page';
 
