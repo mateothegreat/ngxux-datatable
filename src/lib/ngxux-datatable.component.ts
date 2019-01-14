@@ -1,8 +1,8 @@
-import { Component, Input }                     from '@angular/core';
-import { Pageable }                             from '@ngxux/common';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { DataTablePage }                        from './DataTablePage';
-import { Page }                                 from './Page';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { BehaviorSubject, Observable, Subject }   from 'rxjs';
+import { DataTablePage }                          from './DataTablePage';
+import { Page }                                   from './Page';
+import { Pageable }                               from './Pageable';
 
 @Component({
 
@@ -26,6 +26,7 @@ import { Page }                                 from './Page';
 
                        [selectionType]="'single'"
 
+                       (sort)="onSortClick($event)"
                        (activate)="onActivate($event)"
                        (select)="onSelect($event)"
                        (page)="onPageClick($event)">
@@ -51,6 +52,8 @@ export class NgxuxDatatableComponent<T> {
         emptyMessage: '<span class="datatable-loading-text">Loading..</span>'
 
     };
+
+    @Output() public sort = new EventEmitter();
 
     private selected = [];
 
@@ -97,6 +100,12 @@ export class NgxuxDatatableComponent<T> {
             this._clicks.next(event.row);
 
         }
+
+    }
+
+    public onSortClick(e: any): void {
+
+        this.sort.emit(e);
 
     }
 
