@@ -4,23 +4,24 @@ import { NgxuxDatatableComponent } from './ngxux-datatable.component';
 
 @NgModule({
 
-  declarations: [
+    declarations: [
 
-      NgxuxDatatableComponent
+        NgxuxDatatableComponent
 
-  ],
+    ],
 
-  imports: [
+    imports: [
 
-      NgxDatatableModule
+        NgxDatatableModule
 
-  ],
+    ],
 
-  exports: [
+    exports: [
 
-      NgxuxDatatableComponent
+        NgxuxDatatableComponent
 
-  ]
-    
+    ]
+
 })
-export class NgxuxDatatableModule { }
+export class NgxuxDatatableModule {
+}
