@@ -53,6 +53,7 @@ export class NgxuxDatatableComponent<T> {
 
     };
 
+    @Output() public page = new EventEmitter();
     @Output() public sort = new EventEmitter();
 
     private selected = [];

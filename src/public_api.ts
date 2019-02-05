@@ -3,6 +3,8 @@
  */
 
 export * from './lib/Page';
+export * from './lib/Pageable';
+export * from './lib/PageRequest';
 export * from './lib/DataTablePage';
 
 export * from './lib/ngxux-datatable.service';
