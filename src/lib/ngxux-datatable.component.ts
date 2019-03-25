@@ -74,7 +74,7 @@ export class NgxuxDatatableComponent<T> {
         this.page = new Page();
         this.page.count = pageable.totalElements || 0;
         this.page.limit = pageable.pageable.pageSize;
-        this.page.totalPages = Math.ceil(this.page.count.valueOf() / this.page.limit.valueOf());
+        this.page.totalPages = Math.ceil(this.page.count / this.page.limit);
         // this.page.offset = Numbers.getNumber(pageable.pageable.pageSize / pageable.pageable.offset);
         this.page.offset = pageable.pageable.pageNumber;
         this.rows = pageable.content;
